@@ -55,9 +55,9 @@ void _rotl(stack_t **top, unsigned int l_num)
 		free(current);
 		current = *top;
 		while (current->next)
-        {
+		{
 			current = current->next;
-        }
+		}
 		current->next = nnode;
 		nnode->n = idx;
 		nnode->prev = current;
@@ -87,9 +87,9 @@ void _rotr(stack_t **top, unsigned int l_num)
 		nnode->prev = NULL;
 		current = *top;
 		while (current->next->next)
-        {
+		{
 			current = current->next;
-        }
+		}
 		nnode->n = current->next->n;
 		free(current->next);
 		current->next = NULL;
