@@ -47,7 +47,8 @@ void _rotl(stack_t **top, unsigned int l_num)
 		nnode = malloc(sizeof(stack_t));
 		if (!nnode)
 		{
-			print_error(109);
+			fprintf(stderr, "Error: malloc failed\n");
+			exit(EXIT_FAILURE);
 		}
 		current = *top;
 		idx = current->n;
@@ -83,7 +84,10 @@ void _rotr(stack_t **top, unsigned int l_num)
 	{
 		nnode = malloc(sizeof(stack_t));
 		if (!nnode)
-			print_error(109);
+		{
+			fprintf(stderr, "Error: malloc failed\n");
+			exit(EXIT_FAILURE);
+		}
 		nnode->prev = NULL;
 		current = *top;
 		while (current->next->next)
