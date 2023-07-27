@@ -5,3 +5,4 @@ Data structures
 implementing stacks and queues
 Monty byte code files can contain blank lines
 Any output must be printed on stdout
+Any error must be printed on stderr
