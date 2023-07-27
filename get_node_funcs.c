@@ -5,6 +5,7 @@
  * @n: node value
  * Return: new node or null
  */
+
 stack_t *create_node(int n)
 {
 	stack_t *node;
@@ -36,4 +37,28 @@ void free_list(void)
 		main_node = main_node->next;
 		free(current);
 	}
+}
+
+/**
+ * getlen - gets length of list
+ * @top: pointer to top of stack
+ * Return: number of nodes
+ */
+
+size_t getlen(stack_t **top)
+{
+	stack_t *current;
+	size_t length = 0;
+
+	if (*top == NULL)
+		return (0);
+	current = *top;
+
+	while (current)
+	{
+		current = current->next;
+		length++;
+	}
+
+	return (length);
 }

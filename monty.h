@@ -68,6 +68,13 @@ void _mul(stack_t **top, unsigned int l_num);
 void _nop(stack_t **top, unsigned int l_num);
 void add_node(stack_t **, unsigned int l_num);
 
+/** call_funcs4.c */
+void _pstr(stack_t **top, unsigned int l_num);
+void _rotl(stack_t **top, unsigned int l_num);
+void _rotr(stack_t **top, unsigned int l_num);
+void _stack(stack_t **top, unsigned int l_num);
+void _queue(stack_t **top, unsigned int l_num);
+
 /** err_funcs.c */
 void print_error(unsigned int err_code, ...);
 void print_error2(unsigned int err_code, ...);
@@ -75,6 +82,7 @@ void print_error2(unsigned int err_code, ...);
 /** get_node_funcs.c */
 stack_t *create_node(int n);
 void free_list(void);
+size_t getlen(stack_t **top);
 
 #endif
 

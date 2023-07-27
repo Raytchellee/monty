@@ -121,6 +121,11 @@ void call_func(char *opcode, char *exc, int l_num, int fmt)
 		{"pint", _pint},
 		{"pop", _pop},
 		{"nop", _nop},
+		{"pstr", _pstr},
+		{"rotl", _rotl},
+		{"rotr", _rotr},
+		{"stack", _stack},
+		{"queue", _queue},
 		{NULL, NULL}
 	};
 	if (opcode[0] == '#')
